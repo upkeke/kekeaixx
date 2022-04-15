@@ -46,7 +46,7 @@ void MainWindow::init_video()
     get_file(); // 添加播放列表
     playlist->setPlaybackMode(QMediaPlaylist::Loop); //循环播放
     player->setPlaylist(playlist);  //设置播放列表
-    player->setVolume(5); //设置音量
+    player->setVolume(0); //设置音量
     player->play();
 }
 
