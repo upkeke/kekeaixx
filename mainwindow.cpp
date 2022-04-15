@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //resize(1366,768);
     resize(1000,600);
     move(0,0);
     //无边框
@@ -90,9 +89,9 @@ void MainWindow::down_win1()
 
     qDebug()<<"桌面的句柄:"<<Progman;
 
-    //worker 父窗体
+    //worker 父窗体  //第一目标
     HWND WorkerW=nullptr;
-    //显示图标的  //目标
+    //显示图标的
     HWND DefView =nullptr;
     while(true)
     {
@@ -102,7 +101,7 @@ void MainWindow::down_win1()
     }
     qDebug()<<"WorkerW0的句柄:"<<WorkerW;
     qDebug()<<"DefView的句柄:"<<DefView;
-    //找到下一个workerw
+    //找到下一个workerw 第二目标
     HWND WorkerW1=FindWindowEx(nullptr,WorkerW,L"WorkerW",L"");
     //打印当前窗口的句柄
     qDebug()<<"主窗口的句柄:"<<QString().sprintf("%04X",winId());
